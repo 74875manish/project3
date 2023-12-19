@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="replace.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-area">
+            <h1>Paragraph</h1>
+            <textarea name="tname" id="P1" cols="30" rows="10"></textarea>
+        </div>
+        <div class="text-btn">
+            <label>Old Text</label>
+            <input type="text" id="T1">
+            <button type="button" onclick="getString()">Replace String</button>
+            <label>New Text</label>
+            <input type="text" name="" id="T2">
+            <button type="button" onclick="getAllString()">Replace All</button>
+
+        </div>
+    </div>
+
+    <script>
+        function getString()
+        {
+            let textcontent;
+            let n1=document.getElementById("T1").value;
+            let n2=document.getElementById("T2").value;
+            textcontent=document.getElementById("P1").value;
+            textcontent = textcontent.replace(n1,n2);
+            document.getElementById("P1").value=textcontent;
+
+
+        }
+
+        function getAllString()
+        {
+            let textcontent;
+            let n1=document.getElementById("T1").value;
+            let n2=document.getElementById("T2").value;
+            textcontent=document.getElementById("P1").value;
+            textcontent = textcontent.replaceAll(n1,n2);
+            document.getElementById("P1").value=textcontent;
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
